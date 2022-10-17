@@ -14,10 +14,7 @@ def complex_mult(x: complex, y: complex) -> complex:
 
 
 def complex_div(x: complex, y: complex) -> complex:
-    try:
-        return complex(x) / complex(y)
-    except ZeroDivisionError:
-        print('Деление на ноль не допускается!')
+    return complex(x) / complex(y)
 
 
 def complex_calc(d: dict) -> complex:

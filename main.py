@@ -77,7 +77,10 @@ def main():
         select_calc = parse_text(expression)
         if select_calc == 1:
             d = convert_to_complex(expression)
-            result = complex_calc(d)
+            try:
+                result = complex_calc(d)
+            except ZeroDivisionError:
+                print('Деление на ноль не допускается!')
         elif select_calc == 2:
             d = convert_to_fraction(expression)
             try:
